@@ -6,7 +6,7 @@ PORT = 5000
 app = Flask(__name__)
 
 
-@app.route('/_inference', methods=['POST'])
+@app.route("/_inference", methods=["POST"])
 def inference():
     data = request.json
     text = data.get("text", "")
@@ -14,5 +14,5 @@ def inference():
     return jsonify({"message": "Vector generated", "vector": vector})
 
 
-if __name__ == '__main__':
-    app.run(debug=True, port=PORT)
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=PORT)
