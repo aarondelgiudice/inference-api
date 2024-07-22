@@ -10,7 +10,8 @@ app = Flask(__name__)
 def inference():
     data = request.json
     text = data.get("text", "")
-    vector = get_vector(text)
+    model_name = data.get("model_name", None)
+    vector = get_vector(text, model_name)
     return jsonify({"message": "Vector generated", "vector": vector})
 
 
