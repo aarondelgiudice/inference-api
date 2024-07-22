@@ -46,17 +46,24 @@ python src/app.py
 Send a request:
 
 ```shell
-curl -X POST -H "Content-Type: application/json" -d '{"text": "hello world"}' http://localhost:5000/_inference
+curl -X POST -H "Content-Type: application/json" -d '{"text": "hello, world!"}' http://localhost:5000/_inference
 ```
 
 Response:
 
 ```shell
 {
-    "input": {
-        "text": "hello world"
-},
-    "message": "Received"
+  "message": "Vector generated",
+  "vector": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8
+  ]
 }
 ```
 

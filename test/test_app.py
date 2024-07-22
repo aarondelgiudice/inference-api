@@ -23,10 +23,15 @@ class TestFlaskApi(TestCase):
             content_type="application/json",
         )
 
+        expected = {
+            "message": "Vector generated",
+            "vector": [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8],
+        }
+
+        actual = response.json
+
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(
-            response.json, {"message": "Received", "input": {"text": "Hello, World!"}}
-        )
+        self.assertEqual(actual, expected)
 
 
 if __name__ == "__main__":
