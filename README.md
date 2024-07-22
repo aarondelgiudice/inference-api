@@ -3,6 +3,7 @@
 ## Project Structure
 
 ```
+├── Dockerfile
 ├── README.md
 ├── requirements.txt
 ├── src
@@ -12,6 +13,8 @@
     └── test_app.py
 ```
 
+- `Dockerfile`
+: build the docker image.
 - `README.md`
 : you are here.
 - `requirements.txt`
@@ -39,6 +42,8 @@ Activate the API:
 ```shell
 docker run -p 5000:5000 inference-api
 ```
+
+- NOTE: to run manually: `python src/app.py`.
 
 Send a request:
 
@@ -69,4 +74,17 @@ Run tests:
 
 ```shell
 python -m pytest
+```
+
+## Docker Image
+To build:
+
+```shell
+docker build -t inference-api .
+```
+
+To run:
+
+```shell
+docker run -p 5000:5000 inference-api
 ```
