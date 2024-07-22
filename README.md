@@ -37,7 +37,7 @@ python -m pip install -r requirements.txt
 Activate the API:
 
 ```shell
-python src/app.py
+docker run -p 5000:5000 inference-api
 ```
 
 Send a request:
