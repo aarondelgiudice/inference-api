@@ -6,14 +6,9 @@
 ├── README.md
 ├── requirements.txt
 ├── src
-│   ├── __pycache__
-│   │   └── app.cpython-312.pyc
 │   └── app.py
+│   └── inference.py
 └── test
-    ├── __pycache__
-    │   ├── test_app.cpython-311-pytest-7.4.3.pyc
-    │   ├── test_app.cpython-312-pytest-8.3.1.pyc
-    │   └── test_app.cpython-312.pyc
     └── test_app.py
 ```
 
@@ -25,6 +20,8 @@
 : python source code for API routing and model inference.
     - `app.py`
     : python code for API routing.
+    - `inference.py`
+    : python code for model inference.
 - `test/`
 : `pytest` code for unit testing.
 
