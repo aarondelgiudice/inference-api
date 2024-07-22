@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from inference import get_vector
 
-PORT = 5001
+PORT = 5000
 
 app = Flask(__name__)
 
