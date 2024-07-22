@@ -28,6 +28,7 @@ class TestFlaskApi(TestCase):
         self.assertIn("vector", response.json)
 
     def test_inference_endpoint_response(self):
+        """Test the response of the inference endpoint."""
         # load test cases from test_cases.json file
         with open("test/test_cases.json") as f:
             test_cases = json.load(f)
