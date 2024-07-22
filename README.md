@@ -27,3 +27,9 @@ Install required packages:
         }
         ```
 
+## Test
+Run tests:
+    ```shell
+    python -m pytest
+    ```
+
