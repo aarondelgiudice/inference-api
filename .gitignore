@@ -1,4 +1,9 @@
+# virtual env ignore rules
 inference-api/
+
+# python ignore rules
+*/__pycache__
+__pycache__
 
 # Docker ignore rules
 docker-compose.override.yml
