@@ -1,13 +1,8 @@
 # inference-api
 
-## Set up Environment
-Activate environment:
+## Install
+Install required packages:
     ```shell
-    source inference-api/bin/activate
+    python -m pip install -r requirements.txt
     ```
-
-Deactivate environment:
-    ```shell
-    deactivate
-    ```
-
+ 
