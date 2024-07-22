@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from inference import get_vector
 
-PORT = 5000
+PORT = 5001
 
 app = Flask(__name__)
 
@@ -10,7 +10,8 @@ app = Flask(__name__)
 def inference():
     data = request.json
     text = data.get("text", "")
-    vector = get_vector(text)
+    model_name = data.get("model_name", None)
+    vector = get_vector(text, model_name)
     return jsonify({"message": "Vector generated", "vector": vector})
 
 
